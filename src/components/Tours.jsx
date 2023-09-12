@@ -1,4 +1,5 @@
 import { FaMap } from 'react-icons/fa6';
+import Title from './Title';
 import tour1 from '../assets/tour-1.jpeg';
 import tour2 from '../assets/tour-2.jpeg';
 import tour3 from '../assets/tour-3.jpeg';
@@ -9,11 +10,7 @@ import tour6 from '../assets/tour-6.jpeg';
 const Tours = () => {
     return (
         <section className='section' id='tours'>
-            <div className='section-title'>
-                <h2>
-                    featured <span>tours</span>
-                </h2>
-            </div>
+            <Title title='featured' subtitle='tours' />
 
             <div className='section-center featured-center'>
                 <article className='tour-card'>

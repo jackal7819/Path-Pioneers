@@ -180,7 +180,9 @@ p {
 
 .hero {
     min-height: 100vh;
-    background: var(--clr-primary-5);
+    /* background: var(--clr-primary-5); */
+    background: linear-gradient(#2caebab3, #000000b3),
+    url('assets/main.jpeg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,10 +214,10 @@ p {
     border-color: var(--clr-white);
 }
 @media screen and (min-width: 768px) {
-    .hero {
+    /* .hero {
         background: linear-gradient(#2caebab3, #000000b3),
             url('assets/main.jpeg') center/cover no-repeat;
-    }
+    } */
     .hero-banner {
         padding: 0;
     }

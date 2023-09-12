@@ -1,9 +1,6 @@
-import {
-    FaBars,
-    FaFacebook,
-    FaInstagram,
-    FaTwitter,
-} from 'react-icons/fa6';
+import { pageLinks, socialLinks } from '../data';
+
+import { FaBars } from 'react-icons/fa6';
 
 const Navbar = () => {
     return (
@@ -20,58 +17,29 @@ const Navbar = () => {
                         <FaBars />
                     </button>
                 </div>
-                
+
                 <ul className='nav-links' id='nav-links'>
-                    <li>
-                        <a href='#home' className='nav-link'>
-                            home
-                        </a>
-                    </li>
-                    <li>
-                        <a href='#about' className='nav-link'>
-                            about
-                        </a>
-                    </li>
-                    <li>
-                        <a href='#services' className='nav-link'>
-                            services
-                        </a>
-                    </li>
-                    <li>
-                        <a href='#tours' className='nav-link'>
-                            tours
-                        </a>
-                    </li>
+                    {pageLinks.map((link) => (
+                        <li key={link.id}>
+                            <a href={link.path} className='nav-link'>
+                                {link.title}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
 
                 <ul className='nav-icons'>
-                    <li>
-                        <a
-                            href='https://www.facebook.com'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='nav-icon'>
-                            <FaFacebook />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href='https://www.twitter.com'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='nav-icon'>
-                            <FaTwitter />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href='https://www.instagram.com/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='nav-icon'>
-                            <FaInstagram />
-                        </a>
-                    </li>
+                    {socialLinks.map((link) => (
+                        <li key={link.id}>
+                            <a
+                                href={link.path}
+                                target='_blank'
+                                rel='noreferrer'
+                                className='nav-icon'>
+                                <link.icon />
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </nav>

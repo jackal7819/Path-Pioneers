@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
+import { socialLinks } from '../data';
 
 const Footer = () => {
     return (
@@ -26,33 +26,17 @@ const Footer = () => {
                 </li>
             </ul>
             <ul className='footer-icons'>
-                <li>
-                    <a
-                        href='https://www.facebook.com'
-                        target='_blank'
-                        rel='noreferrer'
-                        className='footer-icon'>
-                        <FaFacebook />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href='https://www.twitter.com'
-                        target='_blank'
-                        rel='noreferrer'
-                        className='footer-icon'>
-                        <FaTwitter />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href='https://www.instagram.com'
-                        target='_blank'
-                        rel='noreferrer'
-                        className='footer-icon'>
-                        <FaInstagram />
-                    </a>
-                </li>
+                {socialLinks.map((link) => (
+                    <li key={link.id}>
+                        <a
+                            href={link.path}
+                            target='_blank'
+                            rel='noreferrer'
+                            className='footer-icon'>
+                            <link.icon />
+                        </a>
+                    </li>
+                ))}
             </ul>
             <p className='copyright'>
                 copyright &copy; Path Pioneers travel tours company
