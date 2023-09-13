@@ -17,7 +17,7 @@ const About = () => {
                 <article className='about-info'>
                     <h3>explore the difference</h3>
                     <p>
-                        Embark on a transformative adventure with Path Pioneers.
+                        Embark on a transformative adventure with PATHPIONEERS.
                         Our seasoned explorers craft unforgettable journeys,
                         immersing you in diverse cultures, breathtaking
                         landscapes, and authentic experiences.

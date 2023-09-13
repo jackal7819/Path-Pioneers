@@ -1,6 +1,6 @@
-import { pageLinks, socialLinks } from '../data';
-
 import { FaBars } from 'react-icons/fa6';
+import PageLinks from './PageLinks';
+import SocialIcons from './SocialIcons';
 
 const Navbar = () => {
     return (
@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className='nav-center'>
                 <div className='nav-header'>
                     <h3 className='title'>
-                        Path <span className='title-logo'>Pioneers</span>
+                        PATH<span className='title-logo'>PIONEERS</span>
                     </h3>
                     <button
                         type='button'
@@ -18,29 +18,13 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className='nav-links' id='nav-links'>
-                    {pageLinks.map((link) => (
-                        <li key={link.id}>
-                            <a href={link.path} className='nav-link'>
-                                {link.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <PageLinks
+                    parentClass='nav-links'
+                    id='nav-links'
+                    itemClass='nav-link'
+                />
 
-                <ul className='nav-icons'>
-                    {socialLinks.map((link) => (
-                        <li key={link.id}>
-                            <a
-                                href={link.path}
-                                target='_blank'
-                                rel='noreferrer'
-                                className='nav-icon'>
-                                <link.icon />
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <SocialIcons parentClass='nav-icons' itemClass='nav-icon' />
             </div>
         </nav>
     );
